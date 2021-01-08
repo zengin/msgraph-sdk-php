@@ -240,4 +240,15 @@ class GraphCollectionRequest extends GraphRequest
     {
         return $this->deltaLink;
     }
+
+    /**
+    * Gets a nextlink link to use when resuming
+    * paging
+    *
+    * @return string|null The nextlink link
+    */
+    public function getNextLink()
+    {
+        return $this->nextLink;
+    }
 }
