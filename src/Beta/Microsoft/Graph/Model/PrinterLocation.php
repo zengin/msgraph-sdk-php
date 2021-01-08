@@ -128,7 +128,36 @@ class PrinterLocation extends Entity
         return $this;
     }
     /**
+    * Gets the floor
+    * The floor that the printer is located on. Only numerical values are supported right now.
+    *
+    * @return string The floor
+    */
+    public function getFloor()
+    {
+        if (array_key_exists("floor", $this->_propDict)) {
+            return $this->_propDict["floor"];
+        } else {
+            return null;
+        }
+    }
+
+    /**
+    * Sets the floor
+    * The floor that the printer is located on. Only numerical values are supported right now.
+    *
+    * @param string $val The value of the floor
+    *
+    * @return PrinterLocation
+    */
+    public function setFloor($val)
+    {
+        $this->_propDict["floor"] = $val;
+        return $this;
+    }
+    /**
     * Gets the floorDescription
+    * The description of the floor that the printer is located on.
     *
     * @return string The floorDescription
     */
@@ -317,6 +346,34 @@ class PrinterLocation extends Entity
     public function setRoomDescription($val)
     {
         $this->_propDict["roomDescription"] = $val;
+        return $this;
+    }
+    /**
+    * Gets the roomName
+    * The room that the printer is located in. Only numerical values are supported right now.
+    *
+    * @return string The roomName
+    */
+    public function getRoomName()
+    {
+        if (array_key_exists("roomName", $this->_propDict)) {
+            return $this->_propDict["roomName"];
+        } else {
+            return null;
+        }
+    }
+
+    /**
+    * Sets the roomName
+    * The room that the printer is located in. Only numerical values are supported right now.
+    *
+    * @param string $val The value of the roomName
+    *
+    * @return PrinterLocation
+    */
+    public function setRoomName($val)
+    {
+        $this->_propDict["roomName"] = $val;
         return $this;
     }
     /**

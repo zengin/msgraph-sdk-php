@@ -150,6 +150,33 @@ class Application extends DirectoryObject
     }
     
     /**
+    * Gets the defaultRedirectUri
+    *
+    * @return string The defaultRedirectUri
+    */
+    public function getDefaultRedirectUri()
+    {
+        if (array_key_exists("defaultRedirectUri", $this->_propDict)) {
+            return $this->_propDict["defaultRedirectUri"];
+        } else {
+            return null;
+        }
+    }
+    
+    /**
+    * Sets the defaultRedirectUri
+    *
+    * @param string $val The defaultRedirectUri
+    *
+    * @return Application
+    */
+    public function setDefaultRedirectUri($val)
+    {
+        $this->_propDict["defaultRedirectUri"] = $val;
+        return $this;
+    }
+    
+    /**
     * Gets the description
     *
     * @return string The description

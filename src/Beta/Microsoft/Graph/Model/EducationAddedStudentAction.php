@@ -2,7 +2,7 @@
 /**
 * Copyright (c) Microsoft Corporation.  All Rights Reserved.  Licensed under the MIT License.  See License in the project root for license information.
 * 
-* CloudPcStatus File
+* EducationAddedStudentAction File
 * PHP version 7
 *
 * @category  Library
@@ -16,7 +16,7 @@ namespace Beta\Microsoft\Graph\Model;
 use Microsoft\Graph\Core\Enum;
 
 /**
-* CloudPcStatus class
+* EducationAddedStudentAction class
 *
 * @category  Model
 * @package   Microsoft.Graph
@@ -24,16 +24,12 @@ use Microsoft\Graph\Core\Enum;
 * @license   https://opensource.org/licenses/MIT MIT License
 * @link      https://graph.microsoft.com
 */
-class CloudPcStatus extends Enum
+class EducationAddedStudentAction extends Enum
 {
     /**
-    * The Enum CloudPcStatus
+    * The Enum EducationAddedStudentAction
     */
-    const NOT_PROVISIONED = "notProvisioned";
-    const PROVISIONING = "provisioning";
-    const PROVISIONED = "provisioned";
-    const UPGRADING = "upgrading";
-    const IN_GRACE_PERIOD = "inGracePeriod";
-    const DEPROVISIONING = "deprovisioning";
-    const FAILED = "failed";
+    const NONE = "none";
+    const ASSIGN_IF_OPEN = "assignIfOpen";
+    const UNKNOWN_FUTURE_VALUE = "unknownFutureValue";
 }

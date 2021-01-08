@@ -25,7 +25,39 @@ namespace Beta\Microsoft\Graph\Model;
 class EducationSynchronizationProfileStatus extends Entity
 {
     /**
+    * Gets the lastActivityDateTime
+    *
+    * @return \DateTime The lastActivityDateTime
+    */
+    public function getLastActivityDateTime()
+    {
+        if (array_key_exists("lastActivityDateTime", $this->_propDict)) {
+            if (is_a($this->_propDict["lastActivityDateTime"], "\DateTime")) {
+                return $this->_propDict["lastActivityDateTime"];
+            } else {
+                $this->_propDict["lastActivityDateTime"] = new \DateTime($this->_propDict["lastActivityDateTime"]);
+                return $this->_propDict["lastActivityDateTime"];
+            }
+        }
+        return null;
+    }
+    
+    /**
+    * Sets the lastActivityDateTime
+    *
+    * @param \DateTime $val The lastActivityDateTime
+    *
+    * @return EducationSynchronizationProfileStatus
+    */
+    public function setLastActivityDateTime($val)
+    {
+        $this->_propDict["lastActivityDateTime"] = $val;
+        return $this;
+    }
+    
+    /**
     * Gets the lastSynchronizationDateTime
+    * Represents the time when most recent changes have been observed in the directory.
     *
     * @return \DateTime The lastSynchronizationDateTime
     */

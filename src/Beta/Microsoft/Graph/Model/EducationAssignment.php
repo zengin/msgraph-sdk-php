@@ -25,7 +25,41 @@ namespace Beta\Microsoft\Graph\Model;
 class EducationAssignment extends Entity
 {
     /**
+    * Gets the addedStudentAction
+    * Optional field to control the assignment behavior for students who are added after the assignment is published. If not specified, defaults to none value. Currently supports only two values: none or assignIfOpen.
+    *
+    * @return EducationAddedStudentAction The addedStudentAction
+    */
+    public function getAddedStudentAction()
+    {
+        if (array_key_exists("addedStudentAction", $this->_propDict)) {
+            if (is_a($this->_propDict["addedStudentAction"], "Beta\Microsoft\Graph\Model\EducationAddedStudentAction")) {
+                return $this->_propDict["addedStudentAction"];
+            } else {
+                $this->_propDict["addedStudentAction"] = new EducationAddedStudentAction($this->_propDict["addedStudentAction"]);
+                return $this->_propDict["addedStudentAction"];
+            }
+        }
+        return null;
+    }
+    
+    /**
+    * Sets the addedStudentAction
+    * Optional field to control the assignment behavior for students who are added after the assignment is published. If not specified, defaults to none value. Currently supports only two values: none or assignIfOpen.
+    *
+    * @param EducationAddedStudentAction $val The addedStudentAction
+    *
+    * @return EducationAssignment
+    */
+    public function setAddedStudentAction($val)
+    {
+        $this->_propDict["addedStudentAction"] = $val;
+        return $this;
+    }
+    
+    /**
     * Gets the allowLateSubmissions
+    * Identifies whether students can submit after the due date. If this property is not specified during create, it defaults to true.
     *
     * @return bool The allowLateSubmissions
     */
@@ -474,7 +508,37 @@ class EducationAssignment extends Entity
     }
     
     /**
+    * Gets the notificationChannelUrl
+    * Optional field to specify the URL of the channel to post the assignment publish notification. If not specified or null, defaults to the General channel. This field only applies to assignments where the assignTo value is educationAssignmentClassRecipient. Updating the notificationChannelUrl is not allowed after the assignment has been published.
+    *
+    * @return string The notificationChannelUrl
+    */
+    public function getNotificationChannelUrl()
+    {
+        if (array_key_exists("notificationChannelUrl", $this->_propDict)) {
+            return $this->_propDict["notificationChannelUrl"];
+        } else {
+            return null;
+        }
+    }
+    
+    /**
+    * Sets the notificationChannelUrl
+    * Optional field to specify the URL of the channel to post the assignment publish notification. If not specified or null, defaults to the General channel. This field only applies to assignments where the assignTo value is educationAssignmentClassRecipient. Updating the notificationChannelUrl is not allowed after the assignment has been published.
+    *
+    * @param string $val The notificationChannelUrl
+    *
+    * @return EducationAssignment
+    */
+    public function setNotificationChannelUrl($val)
+    {
+        $this->_propDict["notificationChannelUrl"] = $val;
+        return $this;
+    }
+    
+    /**
     * Gets the status
+    * Status of the Assignment.  You can not PATCH this value.  Possible values are: draft, scheduled, published, assigned.
     *
     * @return EducationAssignmentStatus The status
     */

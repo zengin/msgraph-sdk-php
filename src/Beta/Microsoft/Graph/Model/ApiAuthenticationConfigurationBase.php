@@ -2,7 +2,7 @@
 /**
 * Copyright (c) Microsoft Corporation.  All Rights Reserved.  Licensed under the MIT License.  See License in the project root for license information.
 * 
-* CloudPcStatus File
+* ApiAuthenticationConfigurationBase File
 * PHP version 7
 *
 * @category  Library
@@ -12,11 +12,8 @@
 * @link      https://graph.microsoft.com
 */
 namespace Beta\Microsoft\Graph\Model;
-
-use Microsoft\Graph\Core\Enum;
-
 /**
-* CloudPcStatus class
+* ApiAuthenticationConfigurationBase class
 *
 * @category  Model
 * @package   Microsoft.Graph
@@ -24,16 +21,6 @@ use Microsoft\Graph\Core\Enum;
 * @license   https://opensource.org/licenses/MIT MIT License
 * @link      https://graph.microsoft.com
 */
-class CloudPcStatus extends Enum
+class ApiAuthenticationConfigurationBase extends Entity
 {
-    /**
-    * The Enum CloudPcStatus
-    */
-    const NOT_PROVISIONED = "notProvisioned";
-    const PROVISIONING = "provisioning";
-    const PROVISIONED = "provisioned";
-    const UPGRADING = "upgrading";
-    const IN_GRACE_PERIOD = "inGracePeriod";
-    const DEPROVISIONING = "deprovisioning";
-    const FAILED = "failed";
 }
