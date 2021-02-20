@@ -18,11 +18,10 @@ jobs:
       shell: bash
       run: |
         composer validate
-    - name: composer update
+    - name: composer install
       shell: bash
       run: |
-        composer self-update
-        composer update --prefer-source --no-interaction --no-progress --no-suggest --prefer-lowest
+        composer install
     - name: run tests
       shell: bash
       run : |
